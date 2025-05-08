@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Clicker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header>
+            <h1>✨ COSMIC CLICKER ✨</h1>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-label">Монеты</span>
+                    <span id="coins" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Кликов</span>
+                    <span id="clicks" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">В секунду</span>
+                    <span id="cps" class="stat-value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="clicker-container">
+                <button id="clicker" class="cosmic-button">
+                    <div class="clicker-inner">
+                        <div class="clicker-icon">🌌</div>
+                        <div class="clicker-effect"></div>
+                    </div>
+                </button>
+                <div class="clicker-multiplier">
+                    <span id="click-power">+1</span> за клик
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="upgrades">Улучшения</button>
+                <button class="tab-btn" data-tab="achievements">Достижения</button>
+                <button class="tab-btn" data-tab="prestige">Престиж</button>
+            </div>
+
+            <div class="tab-content active" id="upgrades">
+                <div class="upgrade-category">
+                    <h3>🚀 Автоматические сборщики</h3>
+                    <div class="upgrades-grid" id="auto-upgrades"></div>
+                </div>
+                <div class="upgrade-category">
+                    <h3>💪 Усилители кликов</h3>
+                    <div class="upgrades-grid" id="click-upgrades"></div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="achievements">
+                <div class="achievements-grid" id="achievements-list"></div>
+            </div>
+
+            <div class="tab-content" id="prestige">
+                <div class="prestige-content">
+                    <h3>⚡ Престиж</h3>
+                    <p>Сбросьте прогресс, но получите бонусы для новых прогонок!</p>
+                    <div class="prestige-stats">
+                        <p>Текущий множитель: <span id="prestige-multiplier">1x</span></p>
+                        <p>Доступно звезд: <span id="prestige-points">0</span></p>
+                    </div>
+                    <button id="prestige-btn" class="cosmic-button" disabled>Еще не доступно</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="notifications" id="notifications"></div>
+    </div>
+
+    <script src="node.js"></script>
+</body>
+</html>
